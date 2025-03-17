@@ -570,8 +570,6 @@ button {
     border-radius: 10px;
 }
 
-
-
 .explore-products{
     width: 1170px;
     margin: 0 auto;
@@ -587,7 +585,7 @@ button {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .navbar {
         flex-direction: column;
     }
