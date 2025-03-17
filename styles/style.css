@@ -571,6 +571,22 @@ button {
 }
 
 
+
+.explore-products{
+    width: 1170px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
