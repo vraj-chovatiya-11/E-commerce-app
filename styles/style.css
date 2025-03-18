@@ -579,6 +579,250 @@ button {
 
 
 
+/* grid container */
+
+.grid-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+}
+.grid-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.content p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.large {
+    grid-column: span 2;
+    height: 400px;
+}
+.small {
+    height: 200px;
+}
+
+
+
+/* service section  */
+
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: #fff;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.service-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 10px solid grey;
+    margin-bottom: 20px;
+}
+
+.icon-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    border-radius: 50%;
+    z-index: -1;
+    transform: scale(1.3);
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.service-title {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-text {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+}
+
+
+
+/* footer section  */
+footer{
+    background-color: black;
+}
+
+.footer {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.footer-column h4{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-column input {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.subscribe-box {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.subscribe-box input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    background: transparent;
+    color: white;
+}
+
+.subscribe-box img {
+    border: none;
+    /* padding: 10px; */
+    cursor: pointer;
+    margin-right: 15px;
+}
+.footer-column-codelink{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.download-app img {
+    width: 120px;
+    display: block;
+    margin-top: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.social-icons .social-icon{
+    margin: 0 10px;
+}
+.social-icons a {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111;
+    font-size: 14px;
+    border-top: 1px solid #222;
+    color: white;
+}
+
+
+
 
 
 
@@ -633,4 +877,31 @@ button {
         text-align: center;
     }
 
+}
+
+
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .large {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+    .services {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-column {
+        min-width: 250px;
+    }
+    .social-icons {
+        justify-content: center;
+    }
 }
